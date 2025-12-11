@@ -9,7 +9,7 @@ export const config = {
     port: parseInt(process.env.DB_PORT || "5432", 10),
     name: process.env.DB_NAME || "weather_db",
     user: process.env.DB_USER || "postgres",
-    password: process.env.DB_PASSWORD || "postgres"
+    password: process.env.DB_PASSWORD || "1234"
   },
   redis: {
     host: process.env.REDIS_HOST || "127.0.0.1",
