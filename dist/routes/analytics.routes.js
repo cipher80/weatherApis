@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const AnalyticsController_1 = require("../controllers/AnalyticsController");
+const WeatherAnalyticsService_1 = require("../services/WeatherAnalyticsService");
+const router = (0, express_1.Router)();
+const service = new WeatherAnalyticsService_1.WeatherAnalyticsService();
+const controller = new AnalyticsController_1.AnalyticsController(service);
+router.post("/cities", controller.postCities);
+router.get("/city/:name", controller.getCity);
+exports.default = router;
